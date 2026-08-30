@@ -24,6 +24,7 @@ This lens groups the following projects (see `kitchen-sankhacooray-com.code-work
 
 ## Next steps
 
-- [ ] Generate raster icons + OG image (`web-share-meta-and-manifest` skill)
-- [ ] Replace placeholder card copy with real write-ups / live links as projects ship
-- [ ] Point live-project cards at their deployed subdomains
+- [x] Generate raster icons + OG image
+- [x] Point live-project cards at their deployed subdomains
+- [ ] Replace remaining "in the lab" cards with live links + fuller write-ups as those projects ship
+- [ ] Confirm DNS: CNAME record for this subdomain points at `sankhacooray.github.io`
