@@ -1,0 +1,16 @@
+{
+  "name": "kitchen — Sankha Cooray",
+  "short_name": "kitchen",
+  "description": "A lens on the kitchen as a laboratory — cocktails and coffee as measured systems, food safety as data, and taste as something you can prototype. Side projects at the edge of nutrition, culinary chemistry, and everyday eating.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#140d08",
+  "background_color": "#140d08",
+  "lang": "en",
+  "categories": ["food", "lifestyle"],
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>kitchen — Sankha Cooray · food & culinary tech</title>
+<meta name="description" content="A lens on the kitchen as a laboratory — cocktails and coffee as measured systems, food safety as data, and taste as something you can prototype. Side projects at the edge of nutrition, culinary chemistry, and everyday eating.">
+<link rel="canonical" href="https://kitchen.sankhacooray.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="kitchen">
+<meta property="og:title" content="kitchen — Sankha Cooray · food & culinary tech">
+<meta property="og:description" content="A lens on the kitchen as a laboratory — cocktails and coffee as measured systems, food safety as data, and taste as something you can prototype. Side projects at the edge of nutrition, culinary chemistry, and everyday eating.">
+<meta property="og:url" content="https://kitchen.sankhacooray.com/">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="kitchen — Sankha Cooray · food & culinary tech">
+<meta name="twitter:description" content="A lens on the kitchen as a laboratory — cocktails and coffee as measured systems, food safety as data, and taste as something you can prototype. Side projects at the edge of nutrition, culinary chemistry, and everyday eating.">
+
+<link rel="icon" type="image/svg+xml" href="icon.svg">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#140d08">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="kitchen">
+
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #140d08;
+  --surface: #1c130b;
+  --surface2: #26190e;
+  --border: #3a2716;
+  --text: #f5ede3;
+  --text-dim: #c9b7a2;
+  --text-muted: #8a7358;
+  --accent: #e8a15c;
+  --accent-dim: #b6743a;
+  --accent-soft: #e8a15c14;
+  --accent2: #d96b4a;
+  --accent2-dim: #a84e33;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --maxw: 1080px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  background-image:
+    radial-gradient(800px 400px at 18% -10%, #e8a15c12, transparent 60%),
+    radial-gradient(700px 500px at 100% 15%, #d96b4a0f, transparent 60%);
+}
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+a { color: inherit; text-decoration: none; }
+
+.site-header { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); background: #140d08b3; border-bottom: 1px solid var(--border); }
+.site-header .inner { max-width: var(--maxw); margin: 0 auto; padding: 18px 28px; display: flex; align-items: center; gap: 32px; }
+.brand { display: flex; align-items: baseline; gap: 10px; }
+.brand-mark { font-family: 'Instrument Serif', serif; font-size: 28px; color: var(--accent); letter-spacing: -0.5px; }
+.brand-tag { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1.5px; }
+.nav { margin-left: auto; display: flex; gap: 24px; font-size: 14px; color: var(--text-dim); }
+.nav a:hover { color: var(--text); }
+@media (max-width: 640px) { .nav { display: none; } }
+
+.hero { max-width: var(--maxw); margin: 0 auto; padding: 110px 28px 70px; }
+.hero .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 24px; }
+.hero h1 { font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(42px, 7vw, 78px); line-height: 1.05; letter-spacing: -1.5px; color: var(--text); margin-bottom: 26px; max-width: 16ch; }
+.hero p { font-size: clamp(17px, 2.2vw, 20px); color: var(--text-dim); max-width: 60ch; }
+
+.section { max-width: var(--maxw); margin: 0 auto; padding: 20px 28px 90px; }
+.section-label { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 22px; display: flex; align-items: center; gap: 12px; }
+.section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; display: flex; flex-direction: column; gap: 12px; transition: border-color .18s, background .18s; }
+.card:hover { border-color: var(--accent-dim); background: var(--surface2); }
+.card .top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.card h3 { font-family: 'Instrument Serif', serif; font-size: 26px; font-weight: 400; color: var(--text); letter-spacing: -0.3px; }
+.card p { font-size: 15px; color: var(--text-dim); }
+.chip { font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; padding: 4px 9px; border-radius: 100px; white-space: nowrap; }
+.chip.live { color: var(--accent); background: var(--accent-soft); border: 1px solid var(--accent-dim); }
+.chip.building { color: var(--text-muted); background: #26190e; border: 1px solid var(--border); }
+.card .go { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent); margin-top: 2px; }
+.card.is-building { opacity: .82; }
+.card.is-building:hover { opacity: 1; }
+
+footer { max-width: var(--maxw); margin: 0 auto; padding: 40px 28px 70px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 14px; display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: baseline; }
+footer a { color: var(--text-dim); }
+footer a:hover { color: var(--accent); }
+.footer-mono { font-family: 'JetBrains Mono', monospace; font-size: 12px; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <div class="brand">
+      <span class="brand-mark">kitchen</span>
+      <span class="brand-tag">sankhacooray.com</span>
+    </div>
+    <nav class="nav">
+      <a href="#projects">Projects</a>
+      <a href="https://sankhacooray.com">Home</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="eyebrow">a research lens on food</div>
+  <h1>Where nutrition, flavour, and code meet.</h1>
+  <p>A lens on the kitchen as a laboratory — cocktails and coffee as measured systems, food safety as data, and taste as something you can prototype. Side projects at the edge of nutrition, culinary chemistry, and everyday eating.</p>
+</section>
+
+<section class="section" id="projects">
+  <div class="section-label">Selected projects</div>
+  <div class="grid">
+    <a class="card" href="https://mixlab.sankhacooray.com">
+      <div class="top"><h3>mixlab</h3><span class="chip live">live</span></div>
+      <p>Cocktails as measured systems — ratios, dilution, and balance made explicit.</p>
+      <span class="go">visit &rarr;</span>
+    </a>
+    <a class="card" href="https://coffeelab.sankhacooray.com">
+      <div class="top"><h3>coffeelab</h3><span class="chip live">live</span></div>
+      <p>Brew variables as a controllable surface: dose, ratio, grind, time.</p>
+      <span class="go">visit &rarr;</span>
+    </a>
+    <div class="card is-building">
+      <div class="top"><h3>safebite</h3><span class="chip building">in the lab</span></div>
+      <p>Food-safety and allergen checks — a client front with an Apps Script backend.</p>
+    </div>
+    <div class="card is-building">
+      <div class="top"><h3>umami</h3><span class="chip building">in the lab</span></div>
+      <p>A tasting / recipe playground exploring flavour as something you can compose.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-mono">kitchen.sankhacooray.com</span>
+  <span>·</span>
+  <span>One of several research lenses by <a href="https://sankhacooray.com">Sankha Cooray</a>.</span>
+</footer>
+
+</body>
+</html>
