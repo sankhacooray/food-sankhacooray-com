@@ -91,6 +91,7 @@ a { color: inherit; text-decoration: none; }
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
 .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; display: flex; flex-direction: column; gap: 12px; transition: border-color .18s, background .18s; }
 .card:hover { border-color: var(--accent-dim); background: var(--surface2); }
+.card .thumb { width: 100%; aspect-ratio: 800 / 420; object-fit: cover; object-position: top center; border-radius: var(--radius-sm); border: 1px solid var(--border); display: block; margin-bottom: 4px; background: var(--surface2); }
 .card .top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .card h3 { font-family: 'Instrument Serif', serif; font-size: 26px; font-weight: 400; color: var(--text); letter-spacing: -0.3px; }
 .card p { font-size: 15px; color: var(--text-dim); }
@@ -132,20 +133,24 @@ footer a:hover { color: var(--accent); }
   <div class="section-label">Selected projects</div>
   <div class="grid">
     <a class="card" href="https://mixlab.sankhacooray.com">
+      <img class="thumb" loading="lazy" src="thumbs/mixlab.jpg" alt="mixlab preview">
       <div class="top"><h3>mixlab</h3><span class="chip live">live</span></div>
       <p>Cocktails as measured systems — ratios, dilution, and balance made explicit.</p>
       <span class="go">visit &rarr;</span>
     </a>
     <a class="card" href="https://coffeelab.sankhacooray.com">
+      <img class="thumb" loading="lazy" src="thumbs/coffeelab.jpg" alt="coffeelab preview">
       <div class="top"><h3>coffeelab</h3><span class="chip live">live</span></div>
       <p>Brew variables as a controllable surface: dose, ratio, grind, time.</p>
       <span class="go">visit &rarr;</span>
     </a>
     <div class="card is-building">
+      <img class="thumb" loading="lazy" src="thumbs/safebite.jpg" alt="safebite preview">
       <div class="top"><h3>safebite</h3><span class="chip building">in the lab</span></div>
       <p>Food-safety and allergen checks — a client front with an Apps Script backend.</p>
     </div>
     <div class="card is-building">
+      <img class="thumb" loading="lazy" src="thumbs/umami.jpg" alt="umami preview">
       <div class="top"><h3>umami</h3><span class="chip building">in the lab</span></div>
       <p>A tasting / recipe playground exploring flavour as something you can compose.</p>
     </div>
