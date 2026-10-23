@@ -1,0 +1,151 @@
+{
+  "roles": {
+    "mine": "Mine",
+    "co": "Co-owned",
+    "contrib": "Contributed"
+  },
+  "groups": [
+    {
+      "id": "drinks",
+      "title": "Drinks & flavour",
+      "lede": "Cocktails and coffee treated as measured systems: ratios, dilution, compounds and balance made explicit.",
+      "context": "MixLab · CoffeeLab",
+      "projects": [
+        {
+          "name": "MixLab",
+          "desc": "Explore drink ingredient combinations and see their nutrition, active compounds and safety flags.",
+          "plat": [
+            "web"
+          ],
+          "role": "mine",
+          "org": "sankhacooray",
+          "og": "https://mixlab.sankhacooray.com/",
+          "url": "https://mixlab.sankhacooray.com/",
+          "years": "2026"
+        },
+        {
+          "name": "CoffeeLab",
+          "desc": "A small visual lab for building coffee drinks: dose, ratio, grind and time.",
+          "plat": [
+            "web"
+          ],
+          "role": "mine",
+          "org": "sankhacooray",
+          "og": "https://coffeelab.sankhacooray.com/",
+          "url": "https://coffeelab.sankhacooray.com/",
+          "years": "2026"
+        }
+      ]
+    },
+    {
+      "id": "cooking",
+      "title": "Cooking",
+      "lede": "Recipes as experiments, and a cooking-science simulator that predicts what heat and method will do before you start.",
+      "context": "cook · umami",
+      "projects": [
+        {
+          "name": "cook",
+          "desc": "A simple food blog: healthy, tasty meals built from basic building blocks.",
+          "plat": [
+            "web"
+          ],
+          "role": "mine",
+          "org": "sankhacooray",
+          "thumb": "cook.jpg",
+          "url": "https://cook.sankhacooray.com/",
+          "years": "2026"
+        },
+        {
+          "name": "umami",
+          "desc": "A pre-cook simulator: pick ingredients and a method to see flavour, texture and nutrition changes.",
+          "plat": [
+            "web"
+          ],
+          "role": "mine",
+          "org": "Sankha Cooray",
+          "thumb": "umami.jpg",
+          "years": "2026"
+        }
+      ]
+    },
+    {
+      "id": "safety",
+      "title": "Food safety & allergens",
+      "lede": "Point a phone at a food label and get an allergen and safety verdict in seconds.",
+      "context": "SafeBite",
+      "projects": [
+        {
+          "name": "SafeBite",
+          "desc": "An installable, mobile-first scanner that reads ingredient labels and flags allergens.",
+          "plat": [
+            "web"
+          ],
+          "role": "mine",
+          "org": "Sankha Cooray",
+          "og": "https://safebite.sankhacooray.com/",
+          "url": "https://safebite.sankhacooray.com/",
+          "years": "2026"
+        },
+        {
+          "name": "SafeBite backend",
+          "desc": "The service between the scanner and the AI model that reads each label.",
+          "plat": [],
+          "role": "mine",
+          "org": "Sankha Cooray",
+          "years": "2026"
+        }
+      ]
+    },
+    {
+      "id": "diet",
+      "title": "Diet tracking",
+      "lede": "Set up your usual foods once, tick off what you ate, and let the totals take care of themselves.",
+      "context": "Trophe",
+      "projects": [
+        {
+          "name": "Trophe",
+          "desc": "Your food on autopilot: a daily routine of foods with nutrition worked out for you.",
+          "plat": [
+            "web"
+          ],
+          "role": "mine",
+          "org": "bsc2fast",
+          "thumb": "trophe.jpg",
+          "url": "https://trophe.sankhacooray.com/",
+          "years": "2026"
+        }
+      ]
+    },
+    {
+      "id": "senses",
+      "title": "Multisensory eating",
+      "lede": "Wire a fork and spoon to a Kiwrious conductivity sensor and every bite plays a note.",
+      "context": "Soundbites · Kiwrious",
+      "projects": [
+        {
+          "name": "Soundbites",
+          "desc": "Turns the conductivity of each bite into pitch, so a salad becomes an instrument.",
+          "plat": [
+            "web"
+          ],
+          "role": "contrib",
+          "org": "Augmented Human Lab",
+          "thumb": "soundbites.jpg",
+          "years": "2026"
+        },
+        {
+          "name": "Soundbites (first version)",
+          "desc": "The original Vue build of Soundbites for Kiwrious sensors.",
+          "plat": [
+            "web"
+          ],
+          "role": "contrib",
+          "org": "Augmented Human Lab",
+          "years": "2023–2024"
+        }
+      ]
+    }
+  ],
+  "yearsNote": "Years from each project's git history; umami and SafeBite have no repository, so their file dates are used.",
+  "thumbsNote": "Cards with an `og` page load that page's current og:image live through the Worker (/api/og) over a shared fallback; cook, Trophe, umami and Soundbites have no share image, so they use screenshots."
+}
