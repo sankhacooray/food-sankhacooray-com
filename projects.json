@@ -51,9 +51,9 @@
           ],
           "role": "mine",
           "org": "sankhacooray",
-          "thumb": "cook.jpg",
           "url": "https://cook.sankhacooray.com/",
-          "years": "2026"
+          "years": "2026",
+          "og": "https://cook.sankhacooray.com/"
         },
         {
           "name": "umami",
@@ -114,9 +114,9 @@
           ],
           "role": "mine",
           "org": "bsc2fast",
-          "thumb": "trophe.jpg",
           "url": "https://trophe.sankhacooray.com/",
-          "years": "2026"
+          "years": "2026",
+          "og": "https://trophe.sankhacooray.com/"
         }
       ]
     },
@@ -153,6 +153,6 @@
     }
   ],
   "yearsNote": "Years from each project's git history; umami and SafeBite have no repository, so their file dates are used.",
-  "thumbsNote": "Cards with an `og` page load that page's current og:image live through the Worker (/api/og) over a shared fallback; cook, Trophe, umami and Soundbites have no share image, so they use screenshots.",
+  "thumbsNote": "Cards with an `og` page load that page's current og:image live through the Worker (/api/og) over a shared fallback; umami and Soundbites have no public share image, so they use screenshots.",
   "cardsNote": "Cards show only things people use. Backends and earlier versions are listed as parts of their product (hover the parts chip)."
 }
