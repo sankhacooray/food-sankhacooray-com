@@ -84,22 +84,26 @@
           "org": "Sankha Cooray",
           "og": "https://safebite.sankhacooray.com/",
           "url": "https://safebite.sankhacooray.com/",
-          "years": "2026"
-        },
-        {
-          "name": "SafeBite backend",
-          "desc": "The service between the scanner and the AI model that reads each label.",
-          "plat": [],
-          "role": "mine",
-          "org": "Sankha Cooray",
-          "years": "2026"
+          "years": "2026",
+          "parts": [
+            {
+              "name": "SafeBite",
+              "kind": "Installable web app (PWA)",
+              "repo": "safebite-html5"
+            },
+            {
+              "name": "SafeBite backend",
+              "kind": "Apps Script service that reads each label with an AI model",
+              "repo": "safebite-appscript"
+            }
+          ]
         }
       ]
     },
     {
       "id": "diet",
       "title": "Diet tracking",
-      "lede": "Set up your usual foods once, tick off what you ate, and let the totals take care of themselves.",
+      "lede": "Set up your usual foods once, tick off what you ate, and the totals follow.",
       "context": "Trophe",
       "projects": [
         {
@@ -131,21 +135,24 @@
           "role": "contrib",
           "org": "Augmented Human Lab",
           "thumb": "soundbites.jpg",
-          "years": "2026"
-        },
-        {
-          "name": "Soundbites (first version)",
-          "desc": "The original Vue build of Soundbites for Kiwrious sensors.",
-          "plat": [
-            "web"
-          ],
-          "role": "contrib",
-          "org": "Augmented Human Lab",
-          "years": "2023–2024"
+          "years": "2023–2026",
+          "parts": [
+            {
+              "name": "Soundbites",
+              "kind": "Current HTML5 app (Web Serial)",
+              "repo": "sound-bites-html5"
+            },
+            {
+              "name": "Soundbites, first version",
+              "kind": "Original Vue build, 2023–2024",
+              "repo": "sound-bites-vue"
+            }
+          ]
         }
       ]
     }
   ],
   "yearsNote": "Years from each project's git history; umami and SafeBite have no repository, so their file dates are used.",
-  "thumbsNote": "Cards with an `og` page load that page's current og:image live through the Worker (/api/og) over a shared fallback; cook, Trophe, umami and Soundbites have no share image, so they use screenshots."
+  "thumbsNote": "Cards with an `og` page load that page's current og:image live through the Worker (/api/og) over a shared fallback; cook, Trophe, umami and Soundbites have no share image, so they use screenshots.",
+  "cardsNote": "Cards show only things people use. Backends and earlier versions are listed as parts of their product (hover the parts chip)."
 }
