@@ -2,7 +2,7 @@
 
 **[food.sankhacooray.com](https://food.sankhacooray.com)** — the food, drink & taste hub in the sankhacooray.com
 network: MixLab and CoffeeLab, cook and the umami pre-cook simulator, the SafeBite allergen scanner, Trophe diet
-tracking, and Soundbites. Renamed from `kitchen-sankhacooray-com` (history kept).
+tracking, and Soundbites. Renamed from `kitchen-sankhacooray-com` (history kept); kitchen.sankhacooray.com was closed on 31 Oct 2026 (GitHub Pages off, DNS record removed).
 
 Served by a Cloudflare Worker (`food-sankhacooray`): static assets from `public/`, plus `src/worker.js`, whose
 `/api/og?url=` route fetches a project site's current `og:image` (allowlisted hosts only, cached 1 h). Cards with an
@@ -23,9 +23,7 @@ The VS Code workspace for the hub and its projects is `../food-sankhacooray-com.
 | `src/worker.js` | Serves assets; `/api/og` live share-image proxy |
 | `wrangler.toml` | Worker config + custom domain (creates the DNS record) |
 
-**Legacy kitchen files.** `index.html`, `CNAME`, `og-image.png`, the root icons, `manifest.webmanifest` and `thumbs/`
-at the repo root are the old kitchen.sankhacooray.com site, still served by GitHub Pages. Remove them and turn off
-Pages when kitchen is retired.
+
 
 ## Edit, preview, deploy
 
