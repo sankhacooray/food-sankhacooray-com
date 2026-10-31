@@ -1,8 +1,8 @@
-# food.sankhacooray.com (+ legacy kitchen.sankhacooray.com)
+# food.sankhacooray.com
 
 Two hosts, one repo (see README.md):
 - **food.sankhacooray.com**: Cloudflare Worker `food-sankhacooray`, serves `public/` (built by `build.py` from `template.html`). Deploy: `python3 build.py && CLOUDFLARE_ACCOUNT_ID=9a1da48a0f61e7cebcba39517856d87e npx wrangler deploy`.
-- **kitchen.sankhacooray.com**: GitHub Pages from the repo root (`index.html`, `thumbs/`, `CNAME`). Deploy: `git push`.
+- **kitchen.sankhacooray.com**: closed 31 Oct 2026 (GitHub Pages turned off, DNS record removed, legacy root files deleted).
 
 ## Lighthouse
 <!-- lighthouse-optimized: 2026-10-31 -->
