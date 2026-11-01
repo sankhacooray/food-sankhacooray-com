@@ -13,6 +13,8 @@ const ALLOWED_HOSTS = new Set([
   "safebite.sankhacooray.com",
   "cook.sankhacooray.com",
   "trophe.sankhacooray.com",
+  "rasa.sankhacooray.com",
+  "durio.sankhacooray.com",
 ]);
 const TTL = 3600; // seconds browsers and the edge keep a result
 

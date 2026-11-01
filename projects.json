@@ -69,6 +69,38 @@
       ]
     },
     {
+      "id": "guides",
+      "title": "Local food guides",
+      "lede": "Find what is local, in season and worth the queue, region by region, with the famous places to eat it.",
+      "context": "Rasa · Durio",
+      "projects": [
+        {
+          "name": "Rasa",
+          "desc": "Every local dish of Singapore and Sri Lanka, with real photos, variants and the famous places to eat it.",
+          "plat": [
+            "web"
+          ],
+          "role": "mine",
+          "org": "bsc2fast",
+          "og": "https://rasa.sankhacooray.com/",
+          "url": "https://rasa.sankhacooray.com/",
+          "years": "2026"
+        },
+        {
+          "name": "Durio",
+          "desc": "Is durian in season where you are? Seasons, prices by variety, how to spot each one, and where to buy.",
+          "plat": [
+            "web"
+          ],
+          "role": "mine",
+          "org": "bsc2fast",
+          "og": "https://durio.sankhacooray.com/",
+          "url": "https://durio.sankhacooray.com/",
+          "years": "2026"
+        }
+      ]
+    },
+    {
       "id": "safety",
       "title": "Food safety & allergens",
       "lede": "Point a phone at a food label and get an allergen and safety verdict in seconds.",
