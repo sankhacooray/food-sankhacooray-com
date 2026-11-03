@@ -41,7 +41,7 @@
       "id": "cooking",
       "title": "Cooking",
       "lede": "Recipes as experiments, and a cooking-science simulator that predicts what heat and method will do before you start.",
-      "context": "cook · umami",
+      "context": "cook · Umami",
       "projects": [
         {
           "name": "cook",
@@ -56,15 +56,16 @@
           "og": "https://cook.sankhacooray.com/"
         },
         {
-          "name": "umami",
-          "desc": "A pre-cook simulator: pick ingredients and a method to see flavour, texture and nutrition changes.",
+          "name": "Umami",
+          "desc": "A pre-cook check: pick ingredients, a method and an oil to see smoke point, browning and nutrition effects.",
           "plat": [
             "web"
           ],
           "role": "mine",
           "org": "Sankha Cooray",
-          "thumb": "umami.jpg",
-          "years": "2026"
+          "years": "2026",
+          "url": "https://umami.sankhacooray.com/",
+          "og": "https://umami.sankhacooray.com/"
         }
       ]
     },
@@ -121,12 +122,12 @@
             {
               "name": "SafeBite",
               "kind": "Installable web app (PWA)",
-              "repo": "safebite-html5"
+              "repo": "safebite-sankhacooray-com"
             },
             {
               "name": "SafeBite backend",
               "kind": "Apps Script service that reads each label with an AI model",
-              "repo": "safebite-appscript"
+              "repo": "safebite-sankhacooray-appscript"
             }
           ]
         }
@@ -166,12 +167,11 @@
           ],
           "role": "contrib",
           "org": "Augmented Human Lab",
-          "thumb": "soundbites.jpg",
           "years": "2023–2026",
           "parts": [
             {
               "name": "Soundbites",
-              "kind": "Current HTML5 app (Web Serial)",
+              "kind": "Current HTML5 app (Web Serial), soundbites.sankhacooray.com",
               "repo": "sound-bites-html5"
             },
             {
@@ -179,12 +179,14 @@
               "kind": "Original Vue build, 2023–2024",
               "repo": "sound-bites-vue"
             }
-          ]
+          ],
+          "url": "https://soundbites.sankhacooray.com/",
+          "og": "https://soundbites.sankhacooray.com/"
         }
       ]
     }
   ],
-  "yearsNote": "Years from each project's git history; umami and SafeBite have no repository, so their file dates are used.",
-  "thumbsNote": "Cards with an `og` page load that page's current og:image live through the Worker (/api/og) over a shared fallback; umami and Soundbites have no public share image, so they use screenshots.",
+  "yearsNote": "Years from each project's git history; SafeBite's from its file dates.",
+  "thumbsNote": "Cards with an `og` page load that page's current og:image live through the Worker (/api/og) over a shared fallback.",
   "cardsNote": "Cards show only things people use. Backends and earlier versions are listed as parts of their product (hover the parts chip)."
 }
