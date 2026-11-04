@@ -4,6 +4,7 @@ Run:  python3 build.py
 Everything lands in static HTML so link-preview crawlers and search engines see it.
 """
 import html
+import urllib.parse
 import json
 import os
 
@@ -72,6 +73,20 @@ def card(p):
             f'<div class="cfoot"><span class="plats">{plats(p["plat"])}</span><span class="org">{e(p["org"])}</span>{parts}{link}</div></div></article>')
 
 
+def collage():
+    """Hero collage: each project's live share image (1200x630, shown whole) over a fallback icon."""
+    byname = {p["name"]: p for g in data["groups"] for p in g["projects"]}
+    out = []
+    for n in data.get("collage", []):
+        p = byname[n]
+        assert p.get("og"), f"collage project {n} needs an og URL"
+        src = "/api/og?url=" + urllib.parse.quote(p["og"], safe="")
+        out.append(f'<figure class="shot fallback">{KIND[kind(p)]}'
+                   f'<img src="{e(src)}" alt="{e(p["name"])}: {e(p["desc"])}" width="1200" height="630" decoding="async" '
+                   f'onload="this.parentNode.classList.add(\'loaded\')" onerror="this.remove()"></figure>')
+    return "\n        ".join(out)
+
+
 FOOTER = open(os.path.join(HERE, "footer.html")).read()
 MAX_ROW = 5  # cards that fit side by side at desktop width (rule 3: no empty areas)
 
@@ -130,7 +145,7 @@ desc = ("Food projects by Sankha Cooray: MixLab drinks and CoffeeLab, a cooking-
 assert 120 <= len(desc) <= 160, len(desc)
 
 out = (tpl.replace("{{GROUPS}}", "\n".join(groups)).replace("{{NAV}}", "".join(nav))
-       .replace("{{STATS}}", stats)
+       .replace("{{STATS}}", stats).replace("{{COLLAGE}}", collage())
        .replace("{{DESC}}", e(desc)))
 os.makedirs(os.path.join(HERE, "public"), exist_ok=True)
 open(os.path.join(HERE, "public", "index.html"), "w").write(out)

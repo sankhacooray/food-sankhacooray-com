@@ -11,6 +11,6 @@ Two hosts, one repo (see README.md):
 ## Lighthouse
 <!-- lighthouse-optimized: 2026-10-31 -->
 - Baseline mobile: food perf 68 / a11y 100 / BP 100 / SEO 100; kitchen perf 75 / a11y 94 / BP 100 / SEO 100.
-- food: non-blocking Google Fonts; brand link aria-label removed (name = visible text); hero collage + card thumbs as WebP with 400w/800w `srcset` (`build.py` uses `public/thumbs/<name>.webp` + `-400.webp` when present); live `/api/og` images start after `load` + idle, `loading=lazy`; `public/_headers` 30-day TTL for thumbs/icons/og.png.
+- food: non-blocking Google Fonts; brand link aria-label removed (name = visible text); hero collage (`collage` list in `projects.json`) and cards load each project's live og:image via `/api/og` at 1200:630, no hard-coded screenshots; live `/api/og` images start after `load` + idle, `loading=lazy`; `public/_headers` 30-day TTL for icons/og.png.
 - kitchen: non-blocking fonts + gstatic preconnect; card titles h3→h2 (same style); `--text-muted` raised (light #7a6650, dark #9c8466) and the "in the lab" card fade moved off the status chip so it keeps 4.5:1; thumbs WebP with `srcset` + width/height.
 - Left: `/api/og` serves the projects' full 1200×630 PNGs, 1 h TTL (needs Cloudflare Image Transformations to resize); kitchen cache TTL is fixed by GitHub Pages; shared scripts / gtag handled centrally.

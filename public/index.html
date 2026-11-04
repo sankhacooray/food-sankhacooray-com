@@ -114,8 +114,11 @@ h1 .dot{color:var(--accent)}
 .hero > *{min-width:0}
 .hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(24px,4vw,56px);align-items:center}
 .collage{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.shot{margin:0;border-radius:12px;overflow:hidden;background:var(--surface);box-shadow:0 1px 2px #0000000d,0 14px 34px -18px #2a1a1080;aspect-ratio:16/10}
-.shot img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
+.shot{margin:0;border-radius:12px;overflow:hidden;position:relative;box-shadow:0 1px 2px #0000000d,0 14px 34px -18px #2a1a1080;aspect-ratio:1200/630;display:grid;place-items:center;background:radial-gradient(120% 90% at 20% 0%,var(--accent-soft),transparent 60%),linear-gradient(140deg,var(--surface2),var(--bg))}
+.shot svg{width:clamp(32px,5vh,48px);height:auto;color:var(--accent);opacity:.5;transition:opacity .45s ease}
+.shot img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .45s ease}
+.shot.loaded img{opacity:1}
+.shot.loaded svg{opacity:0}
 /* rule 6/16: the SPARK pipeline, one line */
 .strip{display:flex;flex-wrap:nowrap;align-items:stretch;gap:8px;margin-top:clamp(16px,3vh,30px);overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .strip::-webkit-scrollbar{display:none}
@@ -245,10 +248,10 @@ h1 .dot{color:var(--accent)}
     </div>
     <div>
       <div class="collage">
-        <figure class="shot"><img src="/thumbs/cook-400.webp" srcset="/thumbs/cook-400.webp 400w, /thumbs/cook.webp 800w" sizes="(max-width: 600px) 46vw, 280px" alt="cook, a food blog" width="800" height="420"></figure>
-        <figure class="shot"><img src="/thumbs/trophe-400.webp" srcset="/thumbs/trophe-400.webp 400w, /thumbs/trophe.webp 800w" sizes="(max-width: 600px) 46vw, 280px" alt="Trophe daily food routine" width="800" height="420"></figure>
-        <figure class="shot"><img src="/thumbs/umami-400.webp" srcset="/thumbs/umami-400.webp 400w, /thumbs/umami.webp 800w" sizes="(max-width: 600px) 46vw, 280px" alt="Umami pre-cook check" width="800" height="420"></figure>
-        <figure class="shot"><img src="/thumbs/soundbites-400.webp" srcset="/thumbs/soundbites-400.webp 400w, /thumbs/soundbites.webp 800w" sizes="(max-width: 600px) 46vw, 280px" alt="Soundbites" width="800" height="420"></figure>
+        <figure class="shot fallback"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2.5" y="4" width="19" height="16" rx="2"/><path d="M2.5 8.5h19M5.5 6.3h.01M7.8 6.3h.01"/></svg><img src="/api/og?url=https%3A%2F%2Fcook.sankhacooray.com%2F" alt="cook: A simple food blog: healthy, tasty meals built from basic building blocks." width="1200" height="630" decoding="async" onload="this.parentNode.classList.add('loaded')" onerror="this.remove()"></figure>
+        <figure class="shot fallback"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2.5" y="4" width="19" height="16" rx="2"/><path d="M2.5 8.5h19M5.5 6.3h.01M7.8 6.3h.01"/></svg><img src="/api/og?url=https%3A%2F%2Ftrophe.sankhacooray.com%2F" alt="Trophe: Your food on autopilot: a daily routine of foods with nutrition worked out for you." width="1200" height="630" decoding="async" onload="this.parentNode.classList.add('loaded')" onerror="this.remove()"></figure>
+        <figure class="shot fallback"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2.5" y="4" width="19" height="16" rx="2"/><path d="M2.5 8.5h19M5.5 6.3h.01M7.8 6.3h.01"/></svg><img src="/api/og?url=https%3A%2F%2Fumami.sankhacooray.com%2F" alt="Umami: A pre-cook check: pick ingredients, a method and an oil to see smoke point, browning and nutrition effects." width="1200" height="630" decoding="async" onload="this.parentNode.classList.add('loaded')" onerror="this.remove()"></figure>
+        <figure class="shot fallback"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2.5" y="4" width="19" height="16" rx="2"/><path d="M2.5 8.5h19M5.5 6.3h.01M7.8 6.3h.01"/></svg><img src="/api/og?url=https%3A%2F%2Fsoundbites.sankhacooray.com%2F" alt="Soundbites: Turns the conductivity of each bite into pitch, so a salad becomes an instrument." width="1200" height="630" decoding="async" onload="this.parentNode.classList.add('loaded')" onerror="this.remove()"></figure>
       </div>
       <div class="strip" aria-label="How SafeBite checks a food label">
         <div class="step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2.5h5L16 6"/></svg><span>Label photo</span></div>

@@ -187,6 +187,12 @@
     }
   ],
   "yearsNote": "Years from each project's git history; SafeBite's from its file dates.",
-  "thumbsNote": "Cards with an `og` page load that page's current og:image live through the Worker (/api/og) over a shared fallback.",
-  "cardsNote": "Cards show only things people use. Backends and earlier versions are listed as parts of their product (hover the parts chip)."
+  "thumbsNote": "Cards and the hero collage load each project's current og:image live through the Worker (/api/og) over a shared fallback; nothing is a hard-coded screenshot.",
+  "cardsNote": "Cards show only things people use. Backends and earlier versions are listed as parts of their product (hover the parts chip).",
+  "collage": [
+    "cook",
+    "Trophe",
+    "Umami",
+    "Soundbites"
+  ]
 }
